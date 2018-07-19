@@ -1,0 +1,9 @@
+machine:
+  node:
+    version: 10.1.0
+  services:
+   - docker
+
+dependencies:
+  post:
+    - docker build -t https://github.com/stephenmulwa/DDD-AWS-APP.git .
