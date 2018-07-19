@@ -6,10 +6,10 @@ machine:
 
 dependencies:
   post:
-    - docker build -t https://github.com/stephenmulwa/DDD-AWS-APP.git .
+    - docker build -t ddd-aws .
 test:
   post:
-    - docker run -d -p 4200:4200 $https://github.com/stephenmulwa/DDD-AWS-APP.git; sleep 10
+    - docker run -d -p 4200:4200 ddd-aws; sleep 10
     
     - curl --retry 10 --retry-delay 5 localhost:4200 | grep "DDD AWS Heroes & Heroines"
 
