@@ -6,10 +6,10 @@ machine:
 
 dependencies:
   post:
-    - docker build -t ddd-aws .
+    - docker build -t mulwa-test .
 test:
   post:
-    - docker run -d -p 4200:4200 ddd-aws; sleep 15
+    - docker run -d -p 4200:4200 mulwa-test; sleep 15
     
     - curl --retry 10 --retry-delay 5 localhost:4200 | grep "DDD AWS Heroes & Heroines"
 
