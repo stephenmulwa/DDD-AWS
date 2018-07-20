@@ -6,7 +6,7 @@ machine:
 
 dependencies:
   post:
-    - docker build -t mulwa-test .
+    - docker build -t app .
 test:
   post:
     - docker run -d -p 4200:4200 mulwa-test; sleep 10
