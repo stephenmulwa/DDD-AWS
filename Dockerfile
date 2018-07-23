@@ -9,6 +9,11 @@ RUN apt-get install git -y
 #COPY ./angular-circle-ci-test /opt/
 RUN git clone https://github.com/stephenmulwa/DDD-AWS.git /opt/
 
+# Clean up APT when done.
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends apt-utils
+
 EXPOSE 4200
 
 ENTRYPOINT ["/opt"]
