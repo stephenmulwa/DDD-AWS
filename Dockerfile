@@ -11,10 +11,6 @@ RUN apt-get install libreadline-dev -y
 #COPY ./angular-circle-ci-test /opt/
 RUN git clone https://github.com/stephenmulwa/DDD-AWS.git /opt/
 
-RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install [...]
-
-
 EXPOSE 4200
 
 ENTRYPOINT ["/opt"]
