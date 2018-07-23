@@ -8,8 +8,13 @@ RUN apt-get install git -y
 RUN apt-get install btrfs-tools -y
 RUN apt-get install libreadline-dev -y
 
+ENV HOME /root
+ENV DEBIAN_FRONTEND noninteractive
+
+
 #COPY ./angular-circle-ci-test /opt/
 RUN git clone https://github.com/stephenmulwa/DDD-AWS.git /opt/
+
 
 EXPOSE 4200
 
