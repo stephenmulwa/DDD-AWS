@@ -6,6 +6,7 @@ RUN apt-get update -y && apt-get install jq -y
 
 RUN apt-get install git -y
 RUN apt-get install btrfs-tools -y
+RUN apt-get install libreadline-dev -y
 
 #COPY ./angular-circle-ci-test /opt/
 RUN git clone https://github.com/stephenmulwa/DDD-AWS.git /opt/
