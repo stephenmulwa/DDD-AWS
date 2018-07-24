@@ -9,8 +9,8 @@ dependencies:
     - docker build -t app .
 test:
   post:
-    - docker run -d -p 4200:4200 DDD-AWS; sleep 35
+    - docker run -d -p 4200:4200 DDD-AWS; sleep 55
     
-    - curl --retry 10 --retry-delay 30 localhost:4200 | grep "DDD AWS Heroes & Heroines"
+    - curl --retry 40 --retry-delay 30 localhost:4200 | grep "DDD AWS Heroes & Heroines"
 
     
