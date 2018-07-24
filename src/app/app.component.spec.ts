@@ -4,7 +4,7 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule.withRoutes([
+        app-routingmodule.withRoutes([
           { path: '', component: AppComponent }
         ])
       ],
